@@ -1,9 +1,9 @@
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 
-function search() {
+function komiku() {
     return new Promise((resolve, reject) => {
-        fetch('https://data1.komiku.id/cari/?post_type=manga&s=one+piece', {
+        fetch('https://komiku.id/cari/?post_type=manga&s='+ encodeURIComponent(komiku) , {
             method: 'get'
         })
         .then(res => res.text())
@@ -53,6 +53,6 @@ function search() {
     })
 }
 
-search()
+komiku('naruto')
 .then(res => console.log(res))
 .catch(err => console.log(err))
