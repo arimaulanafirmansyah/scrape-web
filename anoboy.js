@@ -1,6 +1,5 @@
 const cheerio = require('cheerio');
 const fetch = require('node-fetch');
-const title = document.querySelector('.title')
 
 function anoboy() {
     return new Promise((resolve, reject) => {
